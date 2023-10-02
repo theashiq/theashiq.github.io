@@ -16,9 +16,10 @@ My career objective is to advance my career as an iOS developer by taking on mor
 📨 ashiqur.rahman@hotmail.com  
 
 ## Profiles
- **Leetcode** https://leetcode.com/sharkleet/
+ **Github** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; https://github.com/theashiq  
+ **Leetcode** &nbsp; https://leetcode.com/sharkleet  
 
-&nbsp;
+
 # Skills
 
 ## Programming Languages 
