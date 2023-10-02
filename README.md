@@ -58,6 +58,7 @@ Cocos2DX     ● ● ● ○ ○
     - Write reusable and scalable code to connect Unityand cocos2DX apps with backend services (e.g.firebase)
     - Write native code where platform support is unavailable (iOS and Android)
     - Integrate advertisement, analytics SDKs in Unity and Cocos2DX apps
+
 ### Undergraduate Teacher’s Assistant
 - **Organization**
     - United International University
