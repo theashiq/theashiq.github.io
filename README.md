@@ -64,4 +64,4 @@ Cocos2DX     ● ● ● ○ ○
     - United International University
 
 # Documents
-[My Curriculum Vitae](/AshiqurRahman-CV.pdf) 
+[My Curriculum Vitae](/Ashiqur-Rahman-CV.pdf) 
