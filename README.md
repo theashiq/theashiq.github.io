@@ -17,7 +17,7 @@ To secure a position where I can efficiently contribute my skills and abilities 
 
 ## Profiles
  **Github** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [github.com/theashiq](https://github.com/theashiq)  
- **Leetcode** &nbsp; &nbsp; [leetcode.com/sharkleet](https://leetcode.com/sharkleet)  
+ **Leetcode** &nbsp; &nbsp; [leetcode.com/theashiq](https://leetcode.com/theashiq)  
  **linkedin** &nbsp; &nbsp; &nbsp; [linkedin.com/in/ashiqurrahmanbd](https://linkedin.com/in/ashiqurrahmanbd)
 
 
