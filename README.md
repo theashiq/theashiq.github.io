@@ -147,4 +147,4 @@ Firebase, Continuous Integration, MySQL, Meta Spark Studio, Blender
 
 
 # Documents
-[My Curriculum Vitae](/Ashiqur-Rahman-CV.pdf) 
+[CV](/Ashiqur-Rahman-CV.pdf) 
