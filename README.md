@@ -45,12 +45,26 @@ Firebase, Continuous Integration, MySQL, Meta Spark Studio, Blender
 
 # Work Experiences
 
+## Software Engineer (iOS)
+- **Organization**
+    - Bitsmedia Pte Ltd
+- **Duration**
+    - From March 2024 to Present
+- **Responsibilities**
+    - Develop and maintain the Muslim Pro iOS application
+    - Implemented and optimized the livestream feature, enhancing user engagement
+    - Utilize analytics tools (Firebase, Crashlytics etc.) for bug detection, analysis, and resolution
+    - Design and integrate new features to improve app functionality and user experience
+    - Collaborate with international teams to align on project objectives and deliverables
+    - Conduct code reviews
+
+
 ## Senior Software Engineer
 
 - **Organization**
     - Free Pixel Games Ltd.
 - **Duration**
-    - From December 2022 to Present
+    - From December 2022 to March 2024
 - **Responsibilities**
     - Develop and maintain an iOS app for app data visualization
     - Develop and maintain an iOS app for company’s employee management
@@ -100,6 +114,11 @@ Firebase, Continuous Integration, MySQL, Meta Spark Studio, Blender
 - GitHub: www.github.com/swakkhar/RNA-Editing
 
 ## Projects
+
+### Muslim Pro: An iOS application targeted to Muslim audiences for the purpose of Faith and Prayer management.
+- Tools: XCode, Swift, UIKit, SwiftUI, MVVM, Fastlane, REST
+- App Store: www.apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451
+
 ### Picasso Pro: An iOS app that generates images from text prompts utilizing StableDiffusionAPI. Generated images can be shared or saved to the gallery.
 - Tools: XCode, Swift, SwiftUI, Stable Diffusion API
 - GitHub: www.github.com/theashiq/PicassoPro
@@ -116,7 +135,7 @@ Firebase, Continuous Integration, MySQL, Meta Spark Studio, Blender
 - Tools: XCode, Swift, UIKit
 - GitHub: www.github.com/theashiq/TaskMasterUIKit
 
-### Privy: A Google Chrome browser extension that can open URL in private tab and search selected text in private tab
+### Privy: A browser extension that can open URL in private tab and search selected text in private tab
 - Tools: Visual Studio Code, Javascript
 - GitHub: www.github.com/theashiq/Privy 
 
