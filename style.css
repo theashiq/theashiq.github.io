@@ -295,6 +295,7 @@ body {
     display: inline-flex;
     align-items: center;
     padding: 8px 15px;
+    border: 1px solid var(--primary-color); /* Added frame */
     border-radius: 5px;
     text-decoration: none;
     font-weight: 300; /* Made thinner, overriding bold */
@@ -308,20 +309,21 @@ body {
     margin-right: 8px;
 }
 
+.app-store-link i { color: #000; }
+.google-play-link i { color: #2196F3; }
+.github-link i { color: var(--text-color); }
+.mozilla-addons-link i { color: #FF5733; }
+.external-link i { color: var(--primary-color); }
+
 .app-store-link, .google-play-link, .github-link, .mozilla-addons-link, .external-link {
-    color: #fff;
+    color: var(--text-color); /* Changed text color */
+    background-color: transparent; /* Removed background color */
 }
 
-.app-store-link { background-color: #000; }
-.app-store-link:hover { background-color: #333; }
-.google-play-link { background-color: #4CAF50; }
-.google-play-link:hover { background-color: #388E3C; }
-.github-link { background-color: #333; }
-.github-link:hover { background-color: #555; }
-.mozilla-addons-link { background-color: #FF5733; }
-.mozilla-addons-link:hover { background-color: #E64A19; }
-.external-link { background-color: var(--primary-color); }
-.external-link:hover { opacity: 0.9; }
+.app-store-link:hover, .google-play-link:hover, .github-link:hover, .mozilla-addons-link:hover, .external-link:hover {
+    background-color: transparent; /* Ensure hover also transparent */
+    opacity: 0.7; /* Add a subtle hover effect */
+}
 
 .projects-coming-soon {
     margin-top: 0;
@@ -331,9 +333,9 @@ body {
 .contact-info {
     margin-top: 40px;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
+    gap: 10px; /* Adjust gap for vertical list */
 }
 
 .contact-info p {
@@ -348,10 +350,31 @@ body {
 }
 
 .contact-info a {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 15px;
+    border-radius: 5px;
     text-decoration: none;
-    font-weight: bold;
-    color: var(--link-color);
+    font-weight: 300; /* Thinner font */
+    font-size: 1.05em; /* Consistent with project links */
+    color: var(--text-color); /* Use text color for consistency */
+    transition: background-color 0.3s ease, opacity 0.3s;
+    margin: 0 10px; /* Add horizontal margin */
 }
+
+.contact-info a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    opacity: 0.9;
+}
+
+.contact-info a i {
+    margin-right: 12px;
+}
+
+.contact-info p .fa-envelope { color: var(--primary-color); }
+.contact-info p .fa-linkedin { color: #0A66C2; }
+.contact-info p .fa-github { color: var(--text-color); }
+.contact-info p .fa-file-pdf { color: #DC3545; }
 
 /* Footer */
 footer {
@@ -416,7 +439,7 @@ footer {
 /* Hero Scroll Target */
 .hero-scroll-target {
     position: absolute;
-    bottom: 100px;
+    bottom: 150px;
     left: 0;
     width: 100%;
     height: 100px; /* Adjust height as needed for the touch target area */
