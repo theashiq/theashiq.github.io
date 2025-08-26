@@ -38,4 +38,29 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
+    // Copy email to clipboard
+    const emailLink = document.getElementById('emailLink');
+    if (emailLink) {
+        const copyIcon = emailLink.nextElementSibling; // Get the next sibling
+        if (copyIcon && copyIcon.classList.contains('copy-icon')) {
+            copyIcon.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent the mailto link from triggering
+                e.stopPropagation(); // Stop event bubbling to the parent link
+
+                const emailAddress = emailLink.getAttribute('href').replace('mailto:', ''); // Extract email address
+
+                navigator.clipboard.writeText(emailAddress).then(() => {
+                    // Optional: Provide visual feedback
+                    const originalIcon = copyIcon.innerHTML;
+                    copyIcon.innerHTML = '<i class="fas fa-check"></i>'; // Change to check icon
+                    setTimeout(() => {
+                        copyIcon.innerHTML = '<i class="fas fa-copy" style="font-size: 0.7em;"></i>'; // Revert to copy icon
+                    }, 1500);
+                }).catch(err => {
+                    console.error('Failed to copy email: ', err);
+                });
+            });
+        }
+    }
 });
