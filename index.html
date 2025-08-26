@@ -10,20 +10,22 @@
 </head>
 <body>
     <header class="hero">
-        <div class="container">
-            <h1 data-aos="fade-up">Ashiqur Rahman</h1>
-            <p data-aos="fade-up" data-aos-delay="100">iOS & Game Developer | AI/ML Enthusiast</p>
-            <a href="#contact" class="btn" data-aos="fade-up" data-aos-delay="200">Get in Touch</a>
+        <div class="container hero-container">
+            <div class="hero-image" data-aos="fade-right">
+                <img src="https://avatars.githubusercontent.com/u/145163861" alt="Ashiqur Rahman">
+            </div>
+            <div class="hero-text" data-aos="fade-left">
+                <h1>Ashiqur Rahman</h1>
+                <p>iOS & Game Developer | AI/ML Enthusiast</p>
+            </div>
+        </div>
+        <div class="hero-footer">
+            <p>With over five years of experience as a software engineer, I specialize in crafting engaging mobile experiences for iOS and developing immersive games. I thrive in collaborative environments, solving complex problems with elegant solutions.</p>
+            <div class="hero-scroll-target">
+                <i class="fas fa-chevron-down"></i>
+            </div>
         </div>
     </header>
-
-    <section id="about" class="section">
-        <div class="container">
-            <h2 data-aos="fade-right">About Me</h2>
-            <p data-aos="fade-left">I am Ashiqur Rahman, a software engineer from Bangladesh with over five years of experience in developing mobile applications using various technologies and frameworks. I have a bachelor's degree in computer science and engineering and a passion for solving complex problems with elegant and efficient solutions.</p>
-            <p data-aos="fade-left" data-aos-delay="100">My career objective is to secure a position where I can efficiently contribute my skills and abilities for the growth of the organization and build my professional career.</p>
-        </div>
-    </section>
 
     <section id="skills" class="section bg-light">
         <div class="container">
@@ -90,14 +92,7 @@
                         <a href="https://github.com/theashiq/PicassoPro" target="_blank">GitHub</a>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Picasso Pro UIKit</h3>
-                    <p>Picasso Pro app but made with UIKit.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, UIKit, Stable Diffusion API</p>
-                    <div class="project-links">
-                        <a href="https://github.com/theashiq/PicassoProUIKit" target="_blank">GitHub</a>
-                    </div>
-                </div>
+                
                 <div class="project-item" data-aos="fade-up">
                     <h3>Task Master</h3>
                     <p>An iOS app made with UIKit that tracks and reminds user about their saved tasks.</p>
@@ -114,14 +109,7 @@
                         <a href="https://github.com/theashiq/Privy" target="_blank">GitHub</a>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Private Search</h3>
-                    <p>A Mozilla Firefox browser addon similar to Privy</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio Code, Javascript</p>
-                    <div class="project-links">
-                        <a href="https://addons.mozilla.org/en-US/firefox/addon/privatesearchpro/" target="_blank">Mozilla Addons</a> | <a href="https://github.com/Ashiqur12345/PrivateSearch" target="_blank">GitHub</a>
-                    </div>
-                </div>
+                
             </div>
             <h3 data-aos="fade-right" class="subsection-title">Games</h3>
             <div class="project-grid games-project-grid">
@@ -173,7 +161,7 @@
     <section id="contact" class="section bg-dark">
         <div class="container">
             <h2 data-aos="fade-right">Get in Touch</h2>
-            <p data-aos="fade-left">I'm always open to new opportunities and collaborations. Feel free to reach out!</p>
+            <p data-aos="fade-left">I'm passionate about my work and always open to discussing new projects, collaborations, or innovative ideas. If you'd like to connect, feel free to reach out. I look forward to hearing from you!</p>
             <div class="contact-info">
                 <p data-aos="fade-up" data-aos-delay="100"><i class="fas fa-envelope"></i> <a href="mailto:ashiqur.rahman@hotmail.com">Email</a></p>
                 <p data-aos="fade-up" data-aos-delay="200"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/ashiqurrahmanbd" target="_blank">LinkedIn</a></p>
@@ -191,5 +179,8 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="script.js"></script>
+    <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
