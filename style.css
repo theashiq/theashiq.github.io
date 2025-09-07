@@ -130,6 +130,12 @@ body {
     font-weight: 300; /* Made thinner */
 }
 
+#experience {
+    font-size: 1.2em;
+    font-weight: bold;
+    display: inline-block;
+}
+
 .btn:hover {
     opacity: 0.9;
 }

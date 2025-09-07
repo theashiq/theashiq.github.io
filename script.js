@@ -69,7 +69,32 @@ document.addEventListener('DOMContentLoaded', function() {
         const currentYear = new Date().getFullYear();
         const years = currentYear - startYear;
 
-        return `With ${years}+ years of experience as a software engineer, I've worked across a range of technologies, with a strong focus on building iOS apps that are not just functional, but delightful to use. I enjoy collaborating with teams to solve tough problems with clean, thoughtful code."`;
+        return years;
     }
-    document.getElementById('experience').textContent = getYearsOfExperience(2018);
+
+    function animateCountUp(el, start, end, duration = 800) {
+        const range = end - start;
+        const stepTime = Math.max(duration / range, 50); // ensure a smooth but fast update
+        let current = start;
+        const increment = 1;
+
+        const timer = setInterval(() => {
+            current += increment;
+            el.textContent = `${current}+`;
+
+            if (current >= end) {
+            clearInterval(timer);
+            }
+        }, stepTime);
+    }
+
+    const experienceEl = document.getElementById('experience');
+    const startingValue = 1;
+    const targetValue = getYearsOfExperience(2018);
+
+    if (startingValue < targetValue) {
+        animateCountUp(experienceEl, startingValue, targetValue, 800);
+    } else {
+        experienceEl.textContent = `${targetValue}+`;
+    }
 });
