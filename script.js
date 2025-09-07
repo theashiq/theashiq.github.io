@@ -63,4 +63,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Number of years of experience calculation
+    function getYearsOfExperience(startYear) {
+        const currentYear = new Date().getFullYear();
+        const years = currentYear - startYear;
+
+        return `With ${years}+ years of experience as a software engineer, I've worked across a range of technologies, with a strong focus on building iOS apps that are not just functional, but delightful to use. I enjoy collaborating with teams to solve tough problems with clean, thoughtful code."`;
+    }
+    document.getElementById('experience').textContent = getYearsOfExperience(2018);
 });
