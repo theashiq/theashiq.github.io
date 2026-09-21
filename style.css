@@ -8,6 +8,7 @@
     --link-color: #5dade2; /* Lighter blue for dark background */
     --hero-background-color: #1a2525; /* Even darker */
     --alt-background-color: #26374a; /* Alternating section band, darker than cards */
+    --nav-height: 60px; /* Clearance for the fixed nav; see the mobile override */
     --hero-text-color: #ffffff;
 }
 
@@ -45,7 +46,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    padding-top: 0; /* Removed padding */
+    padding-top: var(--nav-height); /* Clear the fixed nav */
     padding-bottom: 000px; /* Increased padding */
     box-sizing: border-box;
     gap: 20px;
@@ -520,6 +521,7 @@ footer {
     white-space: nowrap;
 }
 
+
 .nav-links {
     list-style: none;
     display: flex;
@@ -527,8 +529,26 @@ footer {
     gap: 8px;
     margin: 0;
     padding: 0;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: flex-end;
+    overflow-x: auto;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* legacy Edge */
+}
+
+.nav-links::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-links li {
+    flex: 0 0 auto;
+}
+
+/* Fades the right edge while there are links still off-screen, so it reads as
+   scrollable rather than cut off. Toggled from script.js. */
+.nav-links.can-scroll-right {
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
+    mask-image: linear-gradient(to right, #000 calc(100% - 30px), transparent 100%);
 }
 
 .nav-links a {
@@ -545,9 +565,26 @@ footer {
     background-color: rgba(255, 255, 255, 0.08);
 }
 
+/* Below this width the brand and the links no longer share one row, so the
+   brand gives way. The links align to the start, otherwise any overflow
+   spills off the unreachable start edge instead of scrolling. */
+@media (max-width: 1000px) {
+    .nav-brand {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: center;
+    }
+
+    .nav-links {
+        justify-content: flex-start;
+    }
+}
+
 /* Offset anchor targets so the fixed nav does not cover headings */
 .section {
-    scroll-margin-top: 70px;
+    scroll-margin-top: var(--nav-height);
 }
 
 /* Hero Meta Line */
@@ -738,17 +775,11 @@ footer {
 
 /* Responsive Design — navigation and cards */
 @media (max-width: 768px) {
-    .nav-brand {
-        display: none;
-    }
-
     .nav-container {
-        justify-content: center;
         padding: 8px 0;
     }
 
     .nav-links {
-        justify-content: center;
         gap: 2px;
     }
 
@@ -757,9 +788,8 @@ footer {
         padding: 5px 7px;
     }
 
-    /* The nav wraps to two rows on narrow screens, so anchors need more clearance */
-    .section {
-        scroll-margin-top: 100px;
+    :root {
+        --nav-height: 50px;
     }
 
     .highlights-grid, .education-grid {

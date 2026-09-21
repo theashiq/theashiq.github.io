@@ -1,8 +1,13 @@
 document.addEventListener('DOMContentLoaded', function() {
-    AOS.init({
-        duration: 1000,
-        once: true,
-    });
+    // Guarded: if the AOS CDN fails to load, an uncaught ReferenceError here
+    // would abort the rest of this handler and take every other behaviour on
+    // the page down with it.
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    }
 
     // Scroll to Top Button Logic
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -108,6 +113,20 @@ document.addEventListener('DOMContentLoaded', function() {
     const footerYearEl = document.getElementById('footerYear');
     if (footerYearEl) {
         footerYearEl.textContent = new Date().getFullYear();
+    }
+
+    // The nav links scroll horizontally on narrow screens; fade the right edge
+    // while any of them are still out of view.
+    const navLinks = document.querySelector('.nav-links');
+    if (navLinks) {
+        const updateNavFade = () => {
+            const remaining = navLinks.scrollWidth - navLinks.clientWidth - navLinks.scrollLeft;
+            navLinks.classList.toggle('can-scroll-right', remaining > 1);
+        };
+
+        updateNavFade();
+        navLinks.addEventListener('scroll', updateNavFade);
+        window.addEventListener('resize', updateNavFade);
     }
 
     // Solidify the nav background once the hero is scrolled past
