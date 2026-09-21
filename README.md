@@ -1,177 +1,149 @@
+<img src="https://avatars.githubusercontent.com/u/145163861" alt="Ashiqur Rahman" width="120" align="right">
+
 # Ashiqur Rahman
 
-| ![Photo of Ashiqur Rahman](https://avatars.githubusercontent.com/u/145163861) | 
-|:--:| 
-| *Photo of Ashiqur Rahman* |
+### I build iOS apps for about a hundred million people.
 
+Seven years of it. Most recently Muslim Pro, where I moved the Quran from UIKit
+to SwiftUI. I tend to end up with the parts other people would rather not
+touch — migrations, monetization plumbing, the screen everybody is afraid to
+break.
 
-## About Me
-I am **Ashiqur Rahman**, an **iOS engineer** from Bangladesh with **7+ years** of experience building consumer mobile apps — most recently **Muslim Pro** (100M+ installs), where I migrated the Quran feature from UIKit to SwiftUI. I work across SwiftUI and UIKit, native platform integration, in-app purchase and ad monetization, and reusable modules, including an integration framework adopted across 20+ apps and an open-source SwiftUI layout package.
+Dhaka, Bangladesh. Open to remote work (UTC+6).
 
-Open to remote (UTC+6).
+**[theashiq.github.io](https://theashiq.github.io)** &nbsp;·&nbsp;
+[CV](Ashiqur-Rahman-CV.pdf) &nbsp;·&nbsp;
+[LinkedIn](https://linkedin.com/in/theashiq) &nbsp;·&nbsp;
+[LeetCode](https://leetcode.com/theashiq) &nbsp;·&nbsp;
+[ashiqur.rahman@hotmail.com](mailto:ashiqur.rahman@hotmail.com)
 
-## Highlights
-- **3x ad revenue in three months** — built a custom waterfall ad mediation layer, rolled out in phases from minor titles to flagships
-- **UIKit to SwiftUI migration** — first on the Muslim Pro team to ship production SwiftUI, then migrated the Quran feature to it
-- **20+ titles on one framework** — architected a reusable integration layer; a new title was integration-ready in about two hours
+---
 
-## Contact
-📍 Dhaka, Bangladesh  
-📱 +8801737509263  
-📨 ashiqur.rahman@hotmail.com  
+## Selected work
 
-## Profiles
- **Portfolio** &nbsp;&nbsp; [theashiq.github.io](https://theashiq.github.io)  
- **Github** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [github.com/theashiq](https://github.com/theashiq)  
- **Leetcode** &nbsp; &nbsp; [leetcode.com/theashiq](https://leetcode.com/theashiq)  
- **linkedin** &nbsp; &nbsp; &nbsp; [linkedin.com/in/theashiq](https://linkedin.com/in/theashiq)
+### 01 — Lazy Staggered Grid
+Muslim Pro's Inspiration feed wanted a Pinterest-style masonry layout. SwiftUI
+doesn't ship one, and the iOS versions we still supported didn't even have
+`LazyVGrid`. So I wrote the layout myself, with pluggable chunking strategies so
+the balancing rule could change without touching a single call site — then
+lifted it out of the app and open-sourced it. It runs in production.
 
+`Swift` `SwiftUI` `SPM` — [GitHub ↗](https://github.com/theashiq/LazyStaggeredGrid)
 
-# Technical Skills
+### 02 — The Quran, rebuilt in SwiftUI
+I was first on the team to ship production SwiftUI, bridging new screens into a
+large existing UIKit navigation stack through `UIHostingController`. Then I took
+on the Quran itself. The reader page is the most-used surface in the whole app,
+so I deliberately left it for last and migrated everything around it first — the
+unglamorous sequencing call that kept the risky part from becoming everybody's
+problem.
 
-## Languages
-Swift, Java, C# (also Objective-C, C++, JavaScript, SQL)
-## iOS
-SwiftUI, UIKit, Auto Layout (programmatic), Swift Concurrency (async/await), Combine, StoreKit / In-App Purchase, WidgetKit, Push & Local Notifications, Keychain, Core Haptics, REST APIs, App Store Connect
-## Architecture
-MVVM, MVC, protocol-oriented design, modular Swift packages, SOLID principles
-## Tooling & Delivery
-Xcode, Swift Package Manager, CocoaPods, Fastlane, CI/CD, Git, GitHub
-## Analytics & Experimentation
-Firebase Analytics, Crashlytics, Remote Config, A/B Testing, Tenjin
-## AI-Assisted Development
-Claude Code, Gemini CLI, agentic coding workflows
-## Cross-platform
-Unity (C#), Cocos2d-x, Android (Java), native plugin and bridge development
-## Platforms
-macOS, Windows, Linux
-## Languages Spoken
-Fluent in English
+`Swift` `SwiftUI` `UIKit` — Muslim Pro, 100M+ installs — [App Store ↗](https://apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451)
 
+### 03 — Tripling ad revenue in three months
+Our mediation wasn't filling well, so I wrote our own waterfall layer. Shipping
+it straight to the flagship would have been reckless, so it went out in phases —
+smallest titles first, then mid-tier, then the games that actually paid the
+bills. Three months later the ad revenue had tripled.
 
-# Work Experience
+`AdMob` `AppLovin` `Meta Audience Network` `Tenjin` — Free Pixel Games
 
-## Software Engineer (iOS)
-- **Organization**
-    - Bitsmedia Pte Ltd — Singapore-based publisher of Muslim Pro (100M+ installs)
-- **Duration**
-    - From March 2024 to August 2026
-- **Responsibilities**
-    - Migrated Muslim Pro's Quran feature from UIKit to SwiftUI, deliberately deferring the high-risk reader page to a later phase
-    - First on the team to ship production SwiftUI, bridging new screens into the existing UIKit navigation via UIHostingController
-    - Built a custom staggered-grid layout for the Inspiration feature and published it as an open-source Swift package (LazyStaggeredGrid), consumed via SPM
-    - Shipped Ummah Pro, the in-app community feature — posting, comments, reactions, and sharing — across profile, post detail, reaction breakdown, and enrollment screens
-    - Built Quran reading history and duration tracking, the Qalbox Courses feature, and the complete search experience for the new Dua feature
-    - Adopted Swift Concurrency for new networking code and bridged legacy completion-handler APIs to async/await using continuation wrappers
-    - Contributed to the in-app livestream feature built on Tencent's streaming SDK, handling client-side integration and fixes through Ramadan and Eid traffic peaks
-    - Triaged and resolved production crashes with Firebase Crashlytics
-    - Mentored newer engineers and conducted code reviews while working with teams across time zones
+### 04 — One framework, twenty-plus titles
+Every new game re-integrated the same handful of SDKs by hand, badly and
+slightly differently each time. I built one integration layer for all of it and
+moved the studio's titles onto it. A new game went from days of plumbing to
+roughly two hours. Where an engine had no support, I wrote the bridge —
+Objective-C wrappers with C# interop, Android plugins in Java, and post-build
+Xcode and `Info.plist` configuration that ran itself.
 
+`C#` `Objective-C` `Java` `StoreKit` `Google Play Billing` — Free Pixel Games
 
-## Software Engineer
-- **Organization**
-    - Free Pixel Games Ltd. — mobile studio publishing 20+ titles to the App Store and Google Play
-- **Duration**
-    - From December 2018 to March 2024
-- **Responsibilities**
-    - Built a custom waterfall ad mediation layer that tripled ad revenue within three months, rolled out in phases from minor titles to flagship games to limit risk
-    - Architected a reusable integration framework for ads, analytics, in-app purchase, and platform services, adopted across 20+ shipped titles — a new title was integration-ready in about two hours
-    - Introduced Firebase to the company, replacing Google Analytics and a custom Heroku analytics server, and enabling the studio's first A/B testing through Remote Config
-    - Built and maintained an internal SwiftUI app for company leadership, aggregating revenue and analytics across the portfolio with per-title breakdowns — sole developer
-    - Wrote native bridges for SDKs lacking engine support: Objective-C wrappers with C# interop, Android plugins in Java, and automated post-build Xcode and Info.plist configuration
-    - Integrated StoreKit, Google Play Billing, AdMob, AppLovin, Meta Audience Network, and Tenjin; implemented widgets, push and local notifications, in-app search, review prompts, and haptics
-    - Developed mobile games using Unity3D and C#, and Cocos2D-X with Objective-C, C++, and Java
-    - Mentored new engineers as they joined the team
+### 05 — Ummah Pro
+A community layer inside a prayer app — posts, comments, reactions, sharing,
+profiles, enrollment. Mostly UIKit, with SwiftUI where it earned its place. I
+also built the Quran reading history and duration tracking, the Qalbox Courses
+rails, and the whole search experience for the Dua feature.
 
+`Swift` `UIKit` `SwiftUI` — Muslim Pro
 
-## Game Programmer 
-- **Organization**
-    - Good Game Idea
-- **Duration**
-    - From September 2022 to May 2023 
-- **Responsibilities**
-    - Game development using Unity3D, C#
-    - Low-poly 3D model design in Blender 
-    - Integrate In-App-Purchase for Apple App Store and Google Play Store
-    - Integrate various ad SDK
-    - Integrate analytics libraries like Firebase, Tenjin
+### 06 — Picasso Pro
+A text-to-image app built twice — once in SwiftUI, once in UIKit — so I could
+feel the difference between them rather than argue about it.
 
+`Swift` `SwiftUI` `UIKit` `Stable Diffusion API` —
+[SwiftUI ↗](https://github.com/theashiq/PicassoPro) ·
+[UIKit ↗](https://github.com/theashiq/PicassoProUIKit)
 
-## Undergraduate Teacher's Assistant
-- **Organization**
-    - United International University
+### 07 — Games, on both stores
+Police vs. Thief 3D, Sea Monster City, Shark Attack, Jurassic Sniper. I built
+the monetization, the analytics and the native iOS side of these — widgets, push
+and local notifications, in-app search, review prompts, haptics, StoreKit and
+Play Billing.
 
-# Education
+`Unity` `Cocos2d-x` `C#` `Objective-C` `Java` —
+[Police vs. Thief ↗](https://apps.apple.com/us/app/police-vs-thief-3d-car-race/id1542502766) ·
+[Sea Monster City ↗](https://apps.apple.com/us/app/sea-monster-city-battle-game/id1051258383) ·
+[Shark Attack ↗](https://apps.apple.com/us/app/shark-attack-simulator-games/id1489941954) ·
+[Jurassic Sniper ↗](https://apps.apple.com/us/app/jurassic-sniper-3d/id1535441769)
 
-## BSc in Computer Science and Engineering
-United International University | CGPA 3.78 / 4.00 | 2018
+### 08 — Privy
+Opens a link — or whatever text you've selected — straight into a private tab.
+Tiny, and I use it constantly.
 
-HSC, Notre Dame College (GPA 5.00 / 5.00, 2012) | SSC, Mohadevpur SM High School (GPA 5.00 / 5.00, 2010)
+`JavaScript` — [GitHub ↗](https://github.com/theashiq/Privy)
 
-# Publication
+### Smaller things
+[Private Search](https://addons.mozilla.org/en-US/firefox/addon/privatesearchpro/) —
+the same idea as Privy, as a Firefox add-on ·
+[RockPaperScissors](https://github.com/theashiq/RockPaperScissors) — online
+multiplayer, SwiftUI ·
+[Task Master](https://github.com/theashiq/TaskMasterUIKit) — task tracking and
+reminders, UIKit
 
-Co-author, *PRESa2i: Incremental Decision Trees for Prediction of A-to-I RNA Editing Sites*, F1000Research, 2020
-- URL: [f1000research.com/articles/9-262](https://f1000research.com/articles/9-262)
-- Project page: www.brl.uiu.ac.bd/presa2i/index.php
-- GitHub: www.github.com/swakkhar/RNA-Editing
+---
 
-# Contributions
+## About
 
-## Projects
+Most of what I do lives in the seams — bridging a legacy completion-handler API
+to `async/await`, getting a SwiftUI view to sit convincingly inside a UIKit
+stack, working out which half of a migration to ship first. It's rarely the part
+anyone demos, and it's usually the part that decides whether the demo works.
 
-### LazyStaggeredGrid: An open-source SwiftUI package for Pinterest-style staggered grids, vertical and horizontal, with pluggable chunking strategies. Used in production at Muslim Pro.
-- Tools: Xcode, Swift, SwiftUI, Swift Package Manager (SPM)
-- GitHub: www.github.com/theashiq/LazyStaggeredGrid
+I've spent most of my career on apps with a lot of people on the other end of
+them, which has made me conservative about risk and stubborn about the small
+stuff. I use Claude Code and Gemini CLI daily, mostly to get to the interesting
+decisions faster.
 
-### Muslim Pro: An iOS application targeted to Muslim audiences for the purpose of Faith and Prayer management.
-- Tools: Xcode, Swift, UIKit, SwiftUI, MVVM, Fastlane, REST
-- App Store: www.apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451
+Before iOS I shipped games, which is where I learned to care about frame budgets
+and about how quickly a bad integration compounds.
 
-### Picasso Pro: An iOS app that generates images from text prompts utilizing StableDiffusionAPI. Generated images can be shared or saved to the gallery.
-- Tools: Xcode, Swift, SwiftUI, Stable Diffusion API
-- GitHub: www.github.com/theashiq/PicassoPro
+**Where** &nbsp; Bitsmedia — Muslim Pro · 2024–26 &nbsp;·&nbsp; Free Pixel Games · 2018–24
 
-### Picasso Pro UIKit: Picasso Pro app but made with UIKit.
-- Tools: Xcode, Swift, UIKit, Stable Diffusion API
-- GitHub: www.github.com/theashiq/PicassoProUIKit
+**Studied** &nbsp; BSc Computer Science & Engineering, United International University · 2018 · CGPA 3.78/4.00
 
-### RockPaperScissors: A multiplayer game for iOS where players can play classic rock paper scissors game online against other player.
-- Tools: Xcode, Swift, SwiftUI,
-- GitHub: www.github.com/theashiq/RockPaperScissors
+**Wrote** &nbsp; [PRESa2i: incremental decision trees for predicting A-to-I RNA editing sites ↗](https://f1000research.com/articles/9-262) · F1000Research, 2020
 
-### Task Master: An iOS app made with UIKit that tracks and reminds user about their saved tasks. 
-- Tools: Xcode, Swift, UIKit
-- GitHub: www.github.com/theashiq/TaskMasterUIKit
+**Reach for** &nbsp; Swift · SwiftUI · UIKit · Swift Concurrency · Combine · StoreKit · WidgetKit · Firebase · Fastlane · Unity
 
-### Privy: A browser extension that can open URL in private tab and search selected text in private tab
-- Tools: Visual Studio Code, Javascript
-- GitHub: www.github.com/theashiq/Privy 
+The full formal record — every role, every responsibility — lives in
+[the CV](Ashiqur-Rahman-CV.pdf).
 
-### Private Search: A Mozilla Firefox browser addon similar to Privy
-- Tools: Visual Studio Code, Javascript 
-- URL: www.addons.mozilla.org/en-US/firefox/addon/privatesearchpro/
-- GitHub: www.github.com/Ashiqur12345/PrivateSearch
+---
 
-### Police vs. Thief 3D: A mobile game built with Unity3d game engine for Google Play Store and Apple Store
-- Tools: Visual Studio, Unity3d, C#, Objective C, Java 
-- App Store: www.apps.apple.com/us/app/police-vs-thief-3d-car-race/id1542502766 
-- Play Store: www.play.google.com/store/apps/details?id=com.funvai.policevsthief
+## This repo
 
-### Jurassic Sniper 3D: A mobile game built with Unity3d game engine for Google Play Store and Apple Store
-- Tools: Visual Studio, Unity3d, C#, Objective C, Java 
-- App Store: www.apps.apple.com/us/app/jurassic-sniper-3d/id1535441769
-- Play Store: www.play.google.com/store/apps/details?id=com.funvai.jseasniper
+The site itself: hand-written HTML, CSS and JavaScript, no framework and no
+build step. Open `index.html` and it runs.
 
-### Shark Attack: A mobile game built with Unity3d game engine for Google Play Store and Apple Store
-- Tools: Visual Studio, Unity3d, C#, Objective C, Java 
-- App Store: www.apps.apple.com/us/app/shark-attack-simulator-games/id1489941954
-- Play Store: www.play.google.com/store/apps/details?id=com.fpg.sharkslap
+| | |
+|---|---|
+| `index.html` | the whole page |
+| `style.css` | warm paper and ink, one accent, light and dark |
+| `script.js` | theme toggle, scroll reveals, clipboard — no dependencies |
 
-### Sea Monster City: A mobile game built with Cocos2D-X game engine for Google Play Store and Apple Store
-- Tools: Cocos2D-X, Xcode, Android Studio, Objective C, C++, Java 
-- App Store: www.apps.apple.com/us/app/sea-monster-city-battle-game/id1051258383
-- Play Store: www.play.google.com/store/apps/details?id=com.ziau.seamonstercity
-
-
-# Documents
-[CV](/Ashiqur-Rahman-CV.pdf)
+Type is [Fraunces](https://fonts.google.com/specimen/Fraunces),
+[Inter](https://fonts.google.com/specimen/Inter) and
+[JetBrains Mono](https://fonts.google.com/specimen/JetBrains+Mono). The theme
+follows your system until you pick one, then remembers. Motion is skipped
+entirely under `prefers-reduced-motion`, and the page stays readable with
+JavaScript or the webfonts blocked. Deployed with GitHub Pages.
