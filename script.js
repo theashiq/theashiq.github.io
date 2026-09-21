@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
         heroScrollTarget.addEventListener('click', function(e) {
             e.preventDefault(); // Prevent default behavior
 
-            const targetId = 'skills'; // Always scroll to the skills section
+            const targetId = 'highlights'; // Always scroll to the first section
             const targetElement = document.getElementById(targetId);
 
             if (targetElement) {
@@ -65,9 +65,15 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Number of years of experience calculation
-    function getYearsOfExperience(startYear) {
-        const currentYear = new Date().getFullYear();
-        const years = currentYear - startYear;
+    // Counts whole years elapsed since the start date, so the figure never
+    // runs ahead of the CV (e.g. a Dec 2018 start reads 7+ until Dec 2026).
+    function getYearsOfExperience(startYear, startMonth) {
+        const now = new Date();
+        let years = now.getFullYear() - startYear;
+
+        if (now.getMonth() + 1 < startMonth) {
+            years -= 1;
+        }
 
         return years;
     }
@@ -90,11 +96,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const experienceEl = document.getElementById('experience');
     const startingValue = 1;
-    const targetValue = getYearsOfExperience(2018);
+    const targetValue = getYearsOfExperience(2018, 12); // Career start: December 2018
 
     if (startingValue < targetValue) {
         animateCountUp(experienceEl, startingValue, targetValue, 800);
     } else {
         experienceEl.textContent = `${targetValue}+`;
+    }
+
+    // Footer copyright year
+    const footerYearEl = document.getElementById('footerYear');
+    if (footerYearEl) {
+        footerYearEl.textContent = new Date().getFullYear();
+    }
+
+    // Solidify the nav background once the hero is scrolled past
+    const siteNav = document.getElementById('siteNav');
+    if (siteNav) {
+        const toggleNavBackground = () => {
+            siteNav.classList.toggle('scrolled', window.pageYOffset > 50);
+        };
+
+        toggleNavBackground();
+        window.addEventListener('scroll', toggleNavBackground);
     }
 });

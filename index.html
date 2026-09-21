@@ -3,150 +3,269 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashiqur Rahman - Portfolio</title>
+    <title>Ashiqur Rahman - iOS Engineer</title>
+    <meta name="description" content="Ashiqur Rahman — iOS engineer with 7+ years building consumer mobile apps, most recently Muslim Pro (100M+ installs). SwiftUI, UIKit, monetization, and reusable modules.">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <header class="hero">
+    <nav class="site-nav" id="siteNav">
+        <div class="container nav-container">
+            <a href="#top" class="nav-brand">Ashiqur Rahman</a>
+            <ul class="nav-links">
+                <li><a href="#highlights">Highlights</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience-section">Experience</a></li>
+                <li><a href="#projects">Contributions</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="top">
         <div class="container hero-container">
             <div class="hero-image" data-aos="fade-right">
                 <img src="https://avatars.githubusercontent.com/u/145163861" alt="Ashiqur Rahman">
             </div>
             <div class="hero-text" data-aos="fade-left">
                 <h1>Ashiqur Rahman</h1>
-                <p>iOS Engineer | Mobile App Developer</p>
+                <p>iOS Engineer</p>
+                <p class="hero-meta"><i class="fas fa-location-dot"></i> Dhaka, Bangladesh &nbsp;&middot;&nbsp; Open to remote (UTC+6)</p>
             </div>
         </div>
         <div class="hero-footer">
-            <p><span>With </span> <span id="experience">7+</span><span> years of experience as a software engineer, I've worked across a range of technologies, with a strong focus on building iOS apps that are not just functional, but delightful to use. I enjoy collaborating with teams to solve tough problems with clean, thoughtful code.</span></p>
+            <p><span>With </span><span id="experience">7+</span><span> years of experience building consumer mobile apps, most recently on Muslim Pro (100M+ installs), where I migrated the Quran feature from UIKit to SwiftUI. I work across SwiftUI and UIKit, native platform integration, monetization, and reusable modules — building apps that are not just functional, but delightful to use.</span></p>
             <div class="hero-scroll-target">
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
     </header>
 
+    <section id="highlights" class="section">
+        <div class="container">
+            <h2 data-aos="fade-right">Highlights</h2>
+            <div class="highlights-grid">
+                <div class="highlight-item" data-aos="zoom-in">
+                    <span class="highlight-metric">3x</span>
+                    <h3>Ad revenue in three months</h3>
+                    <p>Built a custom waterfall ad mediation layer, rolled out in phases from minor titles to flagships.</p>
+                </div>
+                <div class="highlight-item" data-aos="zoom-in" data-aos-delay="100">
+                    <span class="highlight-metric">UIKit &rarr; SwiftUI</span>
+                    <h3>Migration at scale</h3>
+                    <p>First on the Muslim Pro team to ship production SwiftUI, then migrated the Quran feature to it.</p>
+                </div>
+                <div class="highlight-item" data-aos="zoom-in" data-aos-delay="200">
+                    <span class="highlight-metric">20+</span>
+                    <h3>Titles on one framework</h3>
+                    <p>Architected a reusable integration layer; a new title was integration-ready in about two hours.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="skills" class="section bg-light">
         <div class="container">
             <h2 data-aos="fade-right">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-item" data-aos="zoom-in">
-                    <h3>Programming Languages</h3>
+                    <h3>Languages</h3>
                     <ul>
-                        <li>Swift, C#, JavaScript, Java, C++, Objective-C</li>
-                        <li>PHP, Shell Scripting</li>
+                        <li>Swift, Java, C#</li>
+                        <li>Objective-C, C++, JavaScript, SQL</li>
                     </ul>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                    <h3>Development</h3>
+                    <h3>iOS</h3>
                     <ul>
-                        <li>iOS, SwiftUI, Unity, .Net Framework</li>
-                        <li>REST API, Trello</li>
+                        <li>SwiftUI, UIKit, Auto Layout (programmatic)</li>
+                        <li>Swift Concurrency (async/await), Combine</li>
+                        <li>StoreKit / In-App Purchase, WidgetKit</li>
+                        <li>Push &amp; Local Notifications, Keychain, Core Haptics</li>
+                        <li>REST APIs, App Store Connect</li>
                     </ul>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>Tools & Version Control</h3>
+                    <h3>Architecture</h3>
                     <ul>
-                        <li>XCode, Unity Editor, Android Studio, Visual Studio</li>
-                        <li>Git (GitHub, GitHub Desktop, Bitbucket, Sourcetree)</li>
+                        <li>MVVM, MVC, protocol-oriented design</li>
+                        <li>Modular Swift packages, SOLID principles</li>
                     </ul>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                    <h3>Design Patterns & Platforms</h3>
+                    <h3>Tooling &amp; Delivery</h3>
                     <ul>
-                        <li>MVVM, MVC</li>
-                        <li>Windows, MacOS, Linux</li>
+                        <li>Xcode, Swift Package Manager, CocoaPods</li>
+                        <li>Fastlane, CI/CD, Git, GitHub</li>
                     </ul>
                 </div>
                 <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-                    <h3>Others</h3>
+                    <h3>Analytics &amp; Experimentation</h3>
                     <ul>
-                        <li>Firebase, Continuous Integration, MySQL</li>
-                        <li>Meta Spark Studio, Blender</li>
-                        <li>Fluent in English</li>
+                        <li>Firebase Analytics, Crashlytics</li>
+                        <li>Remote Config, A/B Testing, Tenjin</li>
+                    </ul>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="500">
+                    <h3>AI-Assisted Development</h3>
+                    <ul>
+                        <li>Claude Code, Gemini CLI</li>
+                        <li>Agentic coding workflows</li>
+                    </ul>
+                </div>
+                <div class="skill-item" data-aos="zoom-in" data-aos-delay="600">
+                    <h3>Cross-platform</h3>
+                    <ul>
+                        <li>Unity (C#), Cocos2d-x, Android (Java)</li>
+                        <li>Native plugin and bridge development</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
+    <section id="experience-section" class="section">
+        <div class="container">
+            <h2 data-aos="fade-right">Experience</h2>
+            <div class="timeline">
+                <article class="timeline-item" data-aos="fade-up">
+                    <div class="timeline-header">
+                        <h3>Software Engineer (iOS)</h3>
+                        <span class="timeline-company">Bitsmedia Pte Ltd</span>
+                        <span class="timeline-dates">March 2024 &ndash; August 2026</span>
+                    </div>
+                    <p class="timeline-context">Singapore-based publisher of Muslim Pro (100M+ installs). Worked from Bitsmedia's Dhaka office with international teams.</p>
+                    <ul>
+                        <li>Migrated Muslim Pro's Quran feature from UIKit to SwiftUI, deliberately deferring the high-risk reader page to a later phase.</li>
+                        <li>First on the team to ship production SwiftUI, bridging new screens into the existing UIKit navigation via UIHostingController.</li>
+                        <li>Built a custom staggered-grid layout for the Inspiration feature and published it as an open-source Swift package (LazyStaggeredGrid), consumed via SPM.</li>
+                        <li>Shipped Ummah Pro, the in-app community feature &mdash; posting, comments, reactions, and sharing &mdash; across profile, post detail, reaction breakdown, and enrollment screens.</li>
+                        <li>Built Quran reading history and duration tracking, the Qalbox Courses feature, and the complete search experience for the new Dua feature.</li>
+                        <li>Adopted Swift Concurrency for new networking code and bridged legacy completion-handler APIs to async/await using continuation wrappers.</li>
+                        <li>Contributed to the in-app livestream feature built on Tencent's streaming SDK, handling client-side integration and fixes through Ramadan and Eid traffic peaks.</li>
+                        <li>Triaged and resolved production crashes with Firebase Crashlytics, and used Claude Code daily to speed up feature work and refactoring.</li>
+                        <li>Mentored newer engineers and conducted code reviews while working with teams across time zones.</li>
+                    </ul>
+                </article>
+                <article class="timeline-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="timeline-header">
+                        <h3>Software Engineer</h3>
+                        <span class="timeline-company">Free Pixel Games Ltd.</span>
+                        <span class="timeline-dates">December 2018 &ndash; March 2024</span>
+                    </div>
+                    <p class="timeline-context">Mobile studio publishing 20+ titles to the App Store and Google Play.</p>
+                    <ul>
+                        <li>Built a custom waterfall ad mediation layer that tripled ad revenue within three months, rolled out in phases from minor titles to flagship games to limit risk.</li>
+                        <li>Architected a reusable integration framework for ads, analytics, in-app purchase, and platform services, adopted across 20+ shipped titles &mdash; a new title was integration-ready in about two hours.</li>
+                        <li>Introduced Firebase to the company, replacing Google Analytics and a custom Heroku analytics server, and enabling the studio's first A/B testing through Remote Config.</li>
+                        <li>Built and maintained an internal SwiftUI app for company leadership, aggregating revenue and analytics across the portfolio with per-title breakdowns &mdash; sole developer.</li>
+                        <li>Wrote native bridges for SDKs lacking engine support: Objective-C wrappers with C# interop, Android plugins in Java, and automated post-build Xcode and Info.plist configuration.</li>
+                        <li>Integrated StoreKit, Google Play Billing, AdMob, AppLovin, Meta Audience Network, and Tenjin; implemented widgets, push and local notifications, in-app search, review prompts, and haptics.</li>
+                        <li>Mentored new engineers as they joined the team.</li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section bg-light">
         <div class="container">
             <h2 data-aos="fade-right">Contributions</h2>
-            <h3 data-aos="fade-right" class="subsection-title">Apps, Libraries & Extensions</h3>
+            <h3 data-aos="fade-right" class="subsection-title">Apps, Libraries &amp; Extensions</h3>
             <div class="project-grid">
                 <div class="project-item" data-aos="fade-up">
                     <h3>Lazy Staggered Grid</h3>
-                    <p>A SwiftUI package that enables masonry or Pinterest style layouts, designed to bridge the gap for older iOS versions that do not support SwiftUI's built-in grids like LazyVGrid or LazyHGrid.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, SwiftUI, Swift Package Manager (SPM)</p>
+                    <p>An open-source SwiftUI package for Pinterest-style staggered grids, vertical and horizontal, with pluggable chunking strategies. Used in production at Muslim Pro, and it bridges the gap for older iOS versions without LazyVGrid or LazyHGrid.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Xcode, Swift, SwiftUI, Swift Package Manager (SPM)</p>
                     <div class="project-links">
                         <a href="https://github.com/theashiq/LazyStaggeredGrid" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
                     <h3>Muslim Pro</h3>
-                    <p>An iOS application targeted to Muslim audiences for the purpose of Faith and Prayer management.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, UIKit, SwiftUI, MVVM, Fastlane, REST</p>
+                    <p>An iOS application targeted to Muslim audiences for faith and prayer management, with 100M+ installs. Contributed the Quran SwiftUI migration, the Ummah Pro community feature, Qalbox Courses, and the Dua search experience.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Xcode, Swift, UIKit, SwiftUI, MVVM, Fastlane, REST</p>
                     <div class="project-links">
                         <a href="https://apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
                     <h3>Picasso Pro</h3>
-                    <p>An iOS app that generates images from text prompts utilizing StableDiffusionAPI. Generated images can be shared or saved to the gallery.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, SwiftUI, Stable Diffusion API</p>
+                    <p>An iOS app that generates images from text prompts utilizing StableDiffusionAPI, built in parallel SwiftUI and UIKit implementations. Generated images can be shared or saved to the gallery.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Xcode, Swift, SwiftUI, UIKit, Stable Diffusion API</p>
                     <div class="project-links">
                         <a href="https://github.com/theashiq/PicassoPro" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-item" data-aos="fade-up" data-aos-delay="300">
                     <h3>Privy</h3>
-                    <p>A browser extension that can open URL in private tab and search selected text in private tab</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio Code, Javascript</p>
+                    <p>A browser extension that can open a URL in a private tab and search selected text in a private tab.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Visual Studio Code, JavaScript</p>
                     <div class="project-links">
                         <a href="https://github.com/theashiq/Privy" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
                     </div>
                 </div>
-                
             </div>
             <h3 data-aos="fade-right" class="subsection-title">Games</h3>
+            <p data-aos="fade-up" class="subsection-note">Built the monetization, analytics, and native iOS integration for these and other Free Pixel Games titles.</p>
             <div class="project-grid games-project-grid">
                 <div class="project-item" data-aos="fade-up" data-aos-delay="100">
                     <h3>Police vs. Thief 3D</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
+                    <p>A mobile game built with the Unity3D game engine for Google Play Store and Apple App Store.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3D, C#, Objective-C, Java</p>
                     <div class="project-links">
                         <a href="https://apps.apple.com/us/app/police-vs-thief-3d-car-race/id1542502766" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.funvai.policevsthief" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
                     </div>
                 </div>
                 <div class="project-item" data-aos="fade-up" data-aos-delay="200">
                     <h3>Jurassic Sniper 3D</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
+                    <p>A mobile game built with the Unity3D game engine for Google Play Store and Apple App Store.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3D, C#, Objective-C, Java</p>
                     <div class="project-links">
                         <a href="https://apps.apple.com/us/app/jurassic-sniper-3d/id1535441769" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.funvai.jseasniper" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
                     </div>
                 </div>
                 <div class="project-item" data-aos="fade-up">
                     <h3>Shark Attack</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
+                    <p>A mobile game built with the Unity3D game engine for Google Play Store and Apple App Store.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3D, C#, Objective-C, Java</p>
                     <div class="project-links">
                         <a href="https://apps.apple.com/us/app/shark-attack-simulator-games/id1489941954" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.fpg.sharkslap" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
                     </div>
                 </div>
                 <div class="project-item" data-aos="fade-up" data-aos-delay="100">
                     <h3>Sea Monster City</h3>
-                    <p>A mobile game built with Cocos2D-X game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Cocos2D-X, XCode, Android Studio, Objective C, C++, Java</p>
+                    <p>A mobile game built with the Cocos2D-X game engine for Google Play Store and Apple App Store.</p>
+                    <p class="tools-list"><strong>Tools:</strong> Cocos2D-X, Xcode, Android Studio, Objective-C, C++, Java</p>
                     <div class="project-links">
                         <a href="https://apps.apple.com/us/app/sea-monster-city-battle-game/id1051258383" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.ziau.seamonstercity" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
                     </div>
                 </div>
             </div>
-            <p data-aos="fade-up" data-aos-delay="300" class="text-center projects-coming-soon">Cooking up something new—coming soon!</p>
+            <p data-aos="fade-up" data-aos-delay="300" class="text-center projects-coming-soon">Cooking up something new&mdash;coming soon!</p>
+        </div>
+    </section>
+
+    <section id="education" class="section">
+        <div class="container">
+            <h2 data-aos="fade-right">Education &amp; Publication</h2>
+            <div class="education-grid">
+                <div class="education-item" data-aos="fade-up">
+                    <h3>BSc in Computer Science and Engineering</h3>
+                    <p class="education-meta">United International University &nbsp;&middot;&nbsp; CGPA 3.78 / 4.00 &nbsp;&middot;&nbsp; 2018</p>
+                    <p class="education-note">HSC, Notre Dame College (GPA 5.00 / 5.00, 2012) &nbsp;&middot;&nbsp; SSC, Mohadevpur SM High School (GPA 5.00 / 5.00, 2010)</p>
+                </div>
+                <div class="education-item" data-aos="fade-up" data-aos-delay="100">
+                    <h3>Publication</h3>
+                    <p class="education-meta">Co-author, <em>PRESa2i: Incremental Decision Trees for Prediction of A-to-I RNA Editing Sites</em>, F1000Research, 2020</p>
+                    <div class="project-links">
+                        <a href="https://f1000research.com/articles/9-262" target="_blank" class="external-link"><i class="fas fa-up-right-from-square"></i> Read the paper</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -165,7 +284,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2025 Ashiqur Rahman. All rights reserved.</p>
+            <p>&copy; <span id="footerYear">2026</span> Ashiqur Rahman. All rights reserved.</p>
         </div>
     </footer>
 

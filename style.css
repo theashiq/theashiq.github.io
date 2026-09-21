@@ -7,6 +7,7 @@
     --card-border-color: #4a5a5a;
     --link-color: #5dade2; /* Lighter blue for dark background */
     --hero-background-color: #1a2525; /* Even darker */
+    --alt-background-color: #26374a; /* Alternating section band, darker than cards */
     --hero-text-color: #ffffff;
 }
 
@@ -472,4 +473,309 @@ footer {
     60% {
         transform: translateY(-15px);
     }
+}
+
+/* Section Background Variants */
+.bg-light {
+    background-color: var(--alt-background-color);
+}
+
+.bg-dark {
+    background-color: var(--hero-background-color);
+}
+
+/* Sticky Site Navigation */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(26, 37, 37, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.site-nav.scrolled {
+    background-color: rgba(26, 37, 37, 0.97);
+    border-bottom-color: var(--card-border-color);
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 12px 0;
+    overflow: visible;
+}
+
+.nav-brand {
+    color: var(--hero-text-color);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 400;
+    white-space: nowrap;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Offset anchor targets so the fixed nav does not cover headings */
+.section {
+    scroll-margin-top: 70px;
+}
+
+/* Hero Meta Line */
+.hero-meta {
+    font-size: 1em !important;
+    margin-bottom: 0 !important;
+    opacity: 0.75;
+}
+
+.hero-meta i {
+    margin-right: 8px;
+    color: var(--primary-color);
+}
+
+/* Highlights Section */
+.highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.highlight-item {
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    border-top: 3px solid var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    text-align: left;
+}
+
+.highlight-item:hover {
+    transform: translateY(-10px);
+}
+
+.highlight-metric {
+    display: block;
+    color: var(--primary-color);
+    font-size: 2em;
+    font-weight: 100;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.highlight-item h3 {
+    font-size: 1.15em;
+    font-weight: 400;
+    margin: 0 0 10px 0;
+}
+
+.highlight-item p {
+    font-size: 1em;
+    margin: 0;
+}
+
+/* Experience Timeline */
+.timeline {
+    margin-top: 40px;
+    text-align: left;
+}
+
+.timeline-item {
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    border-left: 3px solid var(--primary-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: 6px 14px;
+    margin-bottom: 10px;
+}
+
+.timeline-header h3 {
+    color: var(--primary-color);
+    font-size: 1.35em;
+    font-weight: 300;
+    margin: 0;
+}
+
+.timeline-company {
+    font-size: 1.1em;
+    font-weight: 400;
+}
+
+.timeline-dates {
+    font-size: 0.95em;
+    opacity: 0.7;
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.timeline-context {
+    font-size: 1em !important;
+    font-style: italic;
+    opacity: 0.8;
+    margin: 0 0 18px 0 !important;
+    max-width: none !important;
+}
+
+.timeline-item ul {
+    margin: 0;
+    padding-left: 20px;
+}
+
+.timeline-item ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.timeline-item ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Education & Publication */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: left;
+}
+
+.education-item {
+    background: var(--card-background-color);
+    border: 1px solid var(--card-border-color);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.education-item:hover {
+    transform: translateY(-10px);
+}
+
+.education-item h3 {
+    color: var(--primary-color);
+    font-size: 1.25em;
+    font-weight: 300;
+    margin: 0 0 12px 0;
+}
+
+.education-item p {
+    max-width: none !important;
+    margin: 0 0 10px 0 !important;
+    font-size: 1em !important;
+}
+
+.education-note {
+    opacity: 0.75;
+    font-size: 0.95em !important;
+}
+
+.education-item .project-links {
+    margin-top: auto;
+}
+
+.education-item .project-links a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.education-item .project-links a:hover {
+    opacity: 0.7;
+}
+
+/* Projects subsection note */
+.subsection-note {
+    margin-top: -10px !important;
+    opacity: 0.75;
+    font-size: 1em !important;
+}
+
+/* Responsive Design — navigation and cards */
+@media (max-width: 768px) {
+    .nav-brand {
+        display: none;
+    }
+
+    .nav-container {
+        justify-content: center;
+        padding: 8px 0;
+    }
+
+    .nav-links {
+        justify-content: center;
+        gap: 2px;
+    }
+
+    .nav-links a {
+        font-size: 0.85em;
+        padding: 5px 7px;
+    }
+
+    /* The nav wraps to two rows on narrow screens, so anchors need more clearance */
+    .section {
+        scroll-margin-top: 100px;
+    }
+
+    .highlights-grid, .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline-dates {
+        margin-left: 0;
+    }
+
+    .timeline-item, .highlight-item, .education-item {
+        padding: 22px;
+    }
+}
+
+/* Tighten hero title spacing now that a meta line follows it */
+.hero-text p:not(.hero-meta) {
+    margin-bottom: 12px;
 }
