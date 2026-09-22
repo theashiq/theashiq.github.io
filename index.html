@@ -1,178 +1,304 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ashiqur Rahman - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ashiqur Rahman — iOS Engineer</title>
+<meta name="description" content="I build iOS apps for about a hundred million people. Selected work by Ashiqur Rahman — SwiftUI, UIKit, and the parts other people find risky.">
+<meta name="color-scheme" content="light dark">
+<meta property="og:title" content="Ashiqur Rahman — iOS Engineer">
+<meta property="og:description" content="I build iOS apps for about a hundred million people.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@300..600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script>
+/* Set the theme and the js flag before first paint, so there is no flash of
+   the wrong palette and no flash of un-revealed content. */
+(function () {
+    var d = document.documentElement;
+    d.classList.add('js');
+    try {
+        var saved = localStorage.getItem('ar-theme');
+        if (saved === 'light' || saved === 'dark') { d.setAttribute('data-theme', saved); return; }
+    } catch (e) {}
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        d.setAttribute('data-theme', 'dark');
+    }
+}());
+</script>
 </head>
 <body>
-    <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-image" data-aos="fade-right">
-                <img src="https://avatars.githubusercontent.com/u/145163861" alt="Ashiqur Rahman">
-            </div>
-            <div class="hero-text" data-aos="fade-left">
-                <h1>Ashiqur Rahman</h1>
-                <p>iOS Engineer | Mobile App Developer</p>
-            </div>
-        </div>
-        <div class="hero-footer">
-            <p><span>With </span> <span id="experience">7+</span><span> years of experience as a software engineer, I've worked across a range of technologies, with a strong focus on building iOS apps that are not just functional, but delightful to use. I enjoy collaborating with teams to solve tough problems with clean, thoughtful code.</span></p>
-            <div class="hero-scroll-target">
-                <i class="fas fa-chevron-down"></i>
-            </div>
-        </div>
-    </header>
+<a class="skip-link" href="#work">Skip to work</a>
 
-    <section id="skills" class="section bg-light">
-        <div class="container">
-            <h2 data-aos="fade-right">Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-item" data-aos="zoom-in">
-                    <h3>Programming Languages</h3>
-                    <ul>
-                        <li>Swift, C#, JavaScript, Java, C++, Objective-C</li>
-                        <li>PHP, Shell Scripting</li>
-                    </ul>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="100">
-                    <h3>Development</h3>
-                    <ul>
-                        <li>iOS, SwiftUI, Unity, .Net Framework</li>
-                        <li>REST API, Trello</li>
-                    </ul>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="200">
-                    <h3>Tools & Version Control</h3>
-                    <ul>
-                        <li>XCode, Unity Editor, Android Studio, Visual Studio</li>
-                        <li>Git (GitHub, GitHub Desktop, Bitbucket, Sourcetree)</li>
-                    </ul>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="300">
-                    <h3>Design Patterns & Platforms</h3>
-                    <ul>
-                        <li>MVVM, MVC</li>
-                        <li>Windows, MacOS, Linux</li>
-                    </ul>
-                </div>
-                <div class="skill-item" data-aos="zoom-in" data-aos-delay="400">
-                    <h3>Others</h3>
-                    <ul>
-                        <li>Firebase, Continuous Integration, MySQL</li>
-                        <li>Meta Spark Studio, Blender</li>
-                        <li>Fluent in English</li>
-                    </ul>
-                </div>
+<header class="topbar">
+    <div class="shell topbar-inner">
+        <a class="topbar-name" href="#top">Ashiqur&nbsp;Rahman</a>
+        <nav class="topbar-nav" aria-label="Primary">
+            <a href="#work">Work</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+            <a href="Ashiqur-Rahman-CV.pdf" target="_blank" rel="noopener">CV</a>
+        </nav>
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch to dark theme" aria-pressed="false">
+            <span class="theme-toggle-dot" aria-hidden="true"></span>
+        </button>
+    </div>
+</header>
+
+<main id="top">
+
+    <section class="intro">
+        <div class="shell">
+            <p class="eyebrow reveal">iOS Engineer &nbsp;/&nbsp; Dhaka, Bangladesh</p>
+            <h1 class="intro-name reveal">Ashiqur Rahman</h1>
+            <p class="intro-statement reveal">
+                I build iOS apps for about <em>a&nbsp;hundred&nbsp;million</em> people.
+            </p>
+            <div class="intro-body reveal">
+                <p>
+                    <span id="years">Seven</span> years of it. Most recently Muslim Pro, where I moved the
+                    Quran from UIKit to SwiftUI. I tend to end up with the parts other
+                    people would rather not touch — migrations, monetization plumbing,
+                    the screen everybody is afraid to break.
+                </p>
+                <p class="intro-status">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Open to remote work <span class="dim">(UTC+6)</span>
+                </p>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 data-aos="fade-right">Contributions</h2>
-            <h3 data-aos="fade-right" class="subsection-title">Apps, Libraries & Extensions</h3>
-            <div class="project-grid">
-                <div class="project-item" data-aos="fade-up">
-                    <h3>Lazy Staggered Grid</h3>
-                    <p>A SwiftUI package that enables masonry or Pinterest style layouts, designed to bridge the gap for older iOS versions that do not support SwiftUI's built-in grids like LazyVGrid or LazyHGrid.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, SwiftUI, Swift Package Manager (SPM)</p>
-                    <div class="project-links">
-                        <a href="https://github.com/theashiq/LazyStaggeredGrid" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+    <section id="work" class="work">
+        <div class="shell">
+            <h2 class="section-label">Selected work</h2>
+            <ol class="work-list">
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">01</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Lazy Staggered Grid</h3>
+                        <p class="work-meta mono">Open source &middot; Swift, SwiftUI, SPM</p>
+                        <p class="work-story">
+                            Muslim Pro's Inspiration feed wanted a Pinterest-style masonry
+                            layout. SwiftUI doesn't ship one, and the iOS versions we still
+                            supported didn't even have <code>LazyVGrid</code>. So I wrote the
+                            layout myself, with pluggable chunking strategies so the balancing
+                            rule could change without touching a single call site — then lifted
+                            it out of the app and open-sourced it. It runs in production.
+                        </p>
+                        <p class="work-links">
+                            <a href="https://github.com/theashiq/LazyStaggeredGrid" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up">
-                    <h3>Muslim Pro</h3>
-                    <p>An iOS application targeted to Muslim audiences for the purpose of Faith and Prayer management.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, UIKit, SwiftUI, MVVM, Fastlane, REST</p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">02</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">The Quran, rebuilt in SwiftUI</h3>
+                        <p class="work-meta mono">Muslim Pro &middot; 100M+ installs &middot; 2024–26</p>
+                        <p class="work-story">
+                            I was first on the team to ship production SwiftUI, bridging new
+                            screens into a large existing UIKit navigation stack through
+                            <code>UIHostingController</code>. Then I took on the Quran itself.
+                            The reader page is the most-used surface in the whole app, so I
+                            deliberately left it for last and migrated everything around it
+                            first — the unglamorous sequencing call that kept the risky part
+                            from becoming everybody's problem.
+                        </p>
+                        <p class="work-links">
+                            <a href="https://apps.apple.com/us/app/muslim-pro-quran-athan-prayer/id388389451" target="_blank" rel="noopener">App Store<span class="arrow" aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Picasso Pro</h3>
-                    <p>An iOS app that generates images from text prompts utilizing StableDiffusionAPI. Generated images can be shared or saved to the gallery.</p>
-                    <p class="tools-list"><strong>Tools:</strong> XCode, Swift, SwiftUI, Stable Diffusion API</p>
-                    <div class="project-links">
-                        <a href="https://github.com/theashiq/PicassoPro" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">03</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Tripling ad revenue in three months</h3>
+                        <p class="work-meta mono">Free Pixel Games &middot; waterfall mediation</p>
+                        <p class="work-story">
+                            Our mediation wasn't filling well, so I wrote our own waterfall
+                            layer. Shipping it straight to the flagship would have been
+                            reckless, so it went out in phases — smallest titles first, then
+                            mid-tier, then the games that actually paid the bills. Three months
+                            later the ad revenue had tripled.
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Privy</h3>
-                    <p>A browser extension that can open URL in private tab and search selected text in private tab</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio Code, Javascript</p>
-                    <div class="project-links">
-                        <a href="https://github.com/theashiq/Privy" target="_blank" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">04</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">One framework, twenty-plus titles</h3>
+                        <p class="work-meta mono">Free Pixel Games &middot; ads, analytics, IAP, platform services</p>
+                        <p class="work-story">
+                            Every new game re-integrated the same handful of SDKs by hand, badly
+                            and slightly differently each time. I built one integration layer for
+                            all of it and moved the studio's titles onto it. A new game went from
+                            days of plumbing to roughly two hours. Where an engine had no support,
+                            I wrote the bridge — Objective-C wrappers with C# interop, Android
+                            plugins in Java, and post-build Xcode and <code>Info.plist</code>
+                            configuration that ran itself.
+                        </p>
                     </div>
-                </div>
-                
-            </div>
-            <h3 data-aos="fade-right" class="subsection-title">Games</h3>
-            <div class="project-grid games-project-grid">
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Police vs. Thief 3D</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/police-vs-thief-3d-car-race/id1542502766" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.funvai.policevsthief" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">05</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Ummah Pro</h3>
+                        <p class="work-meta mono">Muslim Pro &middot; UIKit with SwiftUI cells</p>
+                        <p class="work-story">
+                            A community layer inside a prayer app — posts, comments, reactions,
+                            sharing, profiles, enrollment. Mostly UIKit, with SwiftUI where it
+                            earned its place. I also built the Quran reading history and duration
+                            tracking, the Qalbox Courses rails, and the whole search experience
+                            for the Dua feature.
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="200">
-                    <h3>Jurassic Sniper 3D</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/jurassic-sniper-3d/id1535441769" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.funvai.jseasniper" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">06</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Picasso Pro</h3>
+                        <p class="work-meta mono">Side project &middot; Swift, SwiftUI, UIKit</p>
+                        <p class="work-story">
+                            A text-to-image app built twice — once in SwiftUI, once in UIKit — so
+                            I could feel the difference between them rather than argue about it.
+                        </p>
+                        <p class="work-links">
+                            <a href="https://github.com/theashiq/PicassoPro" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up">
-                    <h3>Shark Attack</h3>
-                    <p>A mobile game built with Unity3d game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Visual Studio, Unity3d, C#, Objective C, Java</p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/shark-attack-simulator-games/id1489941954" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.fpg.sharkslap" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">07</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Games, on both stores</h3>
+                        <p class="work-meta mono">Unity, Cocos2d-x, Objective-C, Java</p>
+                        <p class="work-story">
+                            Police vs. Thief 3D, Sea Monster City, Shark Attack, Jurassic Sniper.
+                            I built the monetization, the analytics and the native iOS side of
+                            these — widgets, push and local notifications, in-app search, review
+                            prompts, haptics, StoreKit and Play Billing.
+                        </p>
+                        <p class="work-links">
+                            <a href="https://apps.apple.com/us/app/police-vs-thief-3d-car-race/id1542502766" target="_blank" rel="noopener">Police vs. Thief<span class="arrow" aria-hidden="true">↗</span></a>
+                            <a href="https://apps.apple.com/us/app/sea-monster-city-battle-game/id1051258383" target="_blank" rel="noopener">Sea Monster City<span class="arrow" aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
-                </div>
-                <div class="project-item" data-aos="fade-up" data-aos-delay="100">
-                    <h3>Sea Monster City</h3>
-                    <p>A mobile game built with Cocos2D-X game engine for Google Play Store and Apple Store</p>
-                    <p class="tools-list"><strong>Tools:</strong> Cocos2D-X, XCode, Android Studio, Objective C, C++, Java</p>
-                    <div class="project-links">
-                        <a href="https://apps.apple.com/us/app/sea-monster-city-battle-game/id1051258383" target="_blank" class="app-store-link"><i class="fab fa-apple"></i> App Store</a> <a href="https://play.google.com/store/apps/details?id=com.ziau.seamonstercity" target="_blank" class="google-play-link"><i class="fab fa-google-play"></i> Play Store</a>
+                </li>
+
+                <li class="work-item reveal">
+                    <div class="work-index"><span class="mono">08</span></div>
+                    <div class="work-body">
+                        <h3 class="work-title">Privy</h3>
+                        <p class="work-meta mono">Browser extension &middot; JavaScript</p>
+                        <p class="work-story">
+                            Opens a link — or whatever text you've selected — straight into a
+                            private tab. Tiny, and I use it constantly.
+                        </p>
+                        <p class="work-links">
+                            <a href="https://github.com/theashiq/Privy" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">↗</span></a>
+                        </p>
                     </div>
-                </div>
-            </div>
-            <p data-aos="fade-up" data-aos-delay="300" class="text-center projects-coming-soon">Cooking up something new—coming soon!</p>
+                </li>
+
+            </ol>
         </div>
     </section>
 
-    <section id="contact" class="section bg-dark">
-        <div class="container">
-            <h2 data-aos="fade-right">Get in Touch</h2>
-            <p data-aos="fade-left">I'm passionate about my work and always open to discussing new projects, collaborations, or innovative ideas. If you'd like to connect, feel free to reach out. I look forward to hearing from you!</p>
-            <div class="contact-info">
-                <p data-aos="fade-up" data-aos-delay="100"><a id="emailLink" href="mailto:ashiqur.rahman@hotmail.com"><i class="fas fa-envelope"></i> ashiqur.rahman@hotmail.com</a> <span class="copy-icon"><i class="fas fa-copy" style="font-size: 0.7em;"></i></span></p>
-                <p data-aos="fade-up" data-aos-delay="200"><a href="https://www.linkedin.com/in/theashiq" target="_blank"><i class="fab fa-linkedin"></i> /theashiq</a></p>
-                <p data-aos="fade-up" data-aos-delay="300"><a href="https://github.com/theashiq" target="_blank"><i class="fab fa-github"></i> /theashiq</a></p>
-                <p data-aos="fade-up" data-aos-delay="400"><a href="Ashiqur-Rahman-CV.pdf" target="_blank"><i class="fas fa-file-pdf"></i> cv</a></p>
+    <section id="about" class="about">
+        <div class="shell about-grid">
+            <div class="about-main">
+                <h2 class="section-label">About</h2>
+                <p class="about-lead reveal">
+                    I like software that feels like someone was paying attention.
+                </p>
+                <div class="about-copy reveal">
+                    <p>
+                        Most of what I do lives in the seams — bridging a legacy
+                        completion-handler API to <code>async/await</code>, getting a SwiftUI
+                        view to sit convincingly inside a UIKit stack, working out which half
+                        of a migration to ship first. It's rarely the part anyone demos, and
+                        it's usually the part that decides whether the demo works.
+                    </p>
+                    <p>
+                        I've spent most of my career on apps with a lot of people on the other
+                        end of them, which has made me conservative about risk and stubborn
+                        about the small stuff. I use Claude Code and Gemini CLI daily, mostly
+                        to get to the interesting decisions faster.
+                    </p>
+                    <p>
+                        Before iOS I shipped games, which is where I learned to care about
+                        frame budgets and about how quickly a bad integration compounds.
+                    </p>
+                </div>
             </div>
+            <aside class="about-side reveal">
+                <figure class="portrait">
+                    <img src="https://avatars.githubusercontent.com/u/145163861" alt="Ashiqur Rahman" width="440" height="440" loading="lazy" decoding="async">
+                </figure>
+                <dl class="facts">
+                    <div class="fact">
+                        <dt class="mono">Where</dt>
+                        <dd>Bitsmedia <span class="dim">— Muslim Pro</span> &middot; 2024–26</dd>
+                        <dd>Free Pixel Games &middot; 2018–24</dd>
+                    </div>
+                    <div class="fact">
+                        <dt class="mono">Studied</dt>
+                        <dd>BSc Computer Science &amp; Engineering<br><span class="dim">United International University, 2018</span></dd>
+                    </div>
+                    <div class="fact">
+                        <dt class="mono">Wrote</dt>
+                        <dd><a href="https://f1000research.com/articles/9-262" target="_blank" rel="noopener">PRESa2i: incremental decision trees for<br>predicting A-to-I RNA editing sites<span class="arrow" aria-hidden="true">↗</span></a><br><span class="dim">F1000Research, 2020</span></dd>
+                    </div>
+                    <div class="fact">
+                        <dt class="mono">Reach for</dt>
+                        <dd class="tools">Swift &middot; SwiftUI &middot; UIKit &middot; Swift Concurrency &middot; Combine &middot; StoreKit &middot; WidgetKit &middot; Firebase &middot; Fastlane &middot; Unity</dd>
+                    </div>
+                </dl>
+            </aside>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Ashiqur Rahman. All rights reserved.</p>
+    <section id="contact" class="contact">
+        <div class="shell">
+            <h2 class="section-label">Contact</h2>
+            <p class="contact-lead reveal">Say hello.</p>
+            <p class="contact-copy reveal">
+                If you're building something for iOS and want another pair of hands on
+                it — or you just want to argue about SwiftUI — I'd like to hear about it.
+            </p>
+            <ul class="contact-list reveal">
+                <li>
+                    <a id="emailLink" href="mailto:ashiqur.rahman@hotmail.com">ashiqur.rahman@hotmail.com</a>
+                    <button id="copyEmail" class="copy-btn mono" type="button" aria-label="Copy email address">copy</button>
+                </li>
+                <li><a href="https://www.linkedin.com/in/theashiq" target="_blank" rel="noopener">LinkedIn<span class="arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="https://github.com/theashiq" target="_blank" rel="noopener">GitHub<span class="arrow" aria-hidden="true">↗</span></a></li>
+                <li><a href="Ashiqur-Rahman-CV.pdf" target="_blank" rel="noopener">Curriculum vitae <span class="dim">(PDF)</span><span class="arrow" aria-hidden="true">↗</span></a></li>
+            </ul>
         </div>
-    </footer>
+    </section>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="script.js"></script>
-    <button id="scrollToTopBtn" class="scroll-to-top-btn" title="Go to top">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+</main>
+
+<footer class="footer">
+    <div class="shell footer-inner">
+        <span class="mono">Dhaka &middot; UTC+6</span>
+        <span class="mono">&copy; <span id="footerYear">2026</span> Ashiqur Rahman</span>
+    </div>
+</footer>
+
+<!-- If this fails to load, drop the js flag so the reveal styles never apply
+     and the page stays fully readable. -->
+<script src="script.js" onerror="document.documentElement.classList.remove('js')"></script>
 </body>
 </html>
