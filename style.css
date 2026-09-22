@@ -243,7 +243,7 @@ code {
 .intro {
     position: relative;
     padding-top: clamp(56px, 12vh, 130px);
-    padding-bottom: clamp(70px, 14vh, 150px);
+    padding-bottom: clamp(48px, 8vh, 86px);
 }
 
 .eyebrow {
@@ -325,23 +325,6 @@ code {
     0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
     70%  { box-shadow: 0 0 0 8px transparent; }
     100% { box-shadow: 0 0 0 0 transparent; }
-}
-
-.intro-scroll {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    max-width: var(--shell);
-    margin-inline: auto;
-    padding-inline: var(--gutter);
-    margin-top: clamp(40px, 9vh, 90px);
-    color: var(--ink-faint);
-}
-
-.intro-scroll-line {
-    flex: 1;
-    height: 1px;
-    background: var(--rule);
 }
 
 /* ---------------- Section labels --------------------------- */
