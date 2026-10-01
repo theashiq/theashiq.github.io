@@ -99,7 +99,7 @@
         }
 
         // Years of experience, counted from the actual Dec 2018 start so the
-        // figure never runs ahead of the CV.
+        // figure never runs ahead of the resume.
         var yearsEl = document.getElementById('years');
         if (yearsEl) {
             var now = new Date();
