@@ -12,7 +12,7 @@ break.
 Dhaka, Bangladesh. Open to remote work (UTC+6).
 
 **[theashiq.github.io](https://theashiq.github.io)** &nbsp;·&nbsp;
-[CV](Ashiqur-Rahman-CV.pdf) &nbsp;·&nbsp;
+[Resume](Ashiqur-Rahman-Resume.pdf) &nbsp;·&nbsp;
 [LinkedIn](https://linkedin.com/in/theashiq) &nbsp;·&nbsp;
 [LeetCode](https://leetcode.com/theashiq) &nbsp;·&nbsp;
 [ashiqur.rahman@hotmail.com](mailto:ashiqur.rahman@hotmail.com)
@@ -126,7 +126,7 @@ and about how quickly a bad integration compounds.
 **Reach for** &nbsp; Swift · SwiftUI · UIKit · Swift Concurrency · Combine · StoreKit · WidgetKit · Firebase · Fastlane · Unity
 
 The full formal record — every role, every responsibility — lives in
-[the CV](Ashiqur-Rahman-CV.pdf).
+[the resume](Ashiqur-Rahman-Resume.pdf).
 
 ---
 
